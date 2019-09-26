@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>OLA</pattern>
+    <template>OlÃ¡, como vai?</template>
+  </category>
+  <category>
+      <pattern>MEU NOME E *</pattern>
+      <template>E um prazer, <star/></template>
+  </category>
+  <category>
+      <pattern>*</pattern>
+      <template>NÃ£o entendo</template>
+  </category>
+  <category>
+    <pattern>Como vai?</pattern>
+    <template>
+        <random>
+            <li>Vou bem</li>
+            <li>De boa</li>
+            <li>Beleza</li>
+        </random>
+    </template>
+  </category>
+</aiml>
