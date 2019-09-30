@@ -18,10 +18,7 @@
         <pattern>MEU NOME E *</pattern>
         <template>
             E um prazer,
-            <set name="username">
-                <star />
-                !
-            </set>
+            <set name="username"> <star />! </set>
         </template>
     </category>
 
