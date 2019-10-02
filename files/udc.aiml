@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <aiml>
+    
+    <!-- GERAL -->
     <category>
-        <pattern>OLA</pattern>
+        <pattern>OLA #</pattern>
         <template>OlÃ¡ como vai?</template>
     </category>
     <category>
-        <pattern>Como vai?</pattern>
+        <pattern>COMO VAI #</pattern>
         <template>
             <random>
                 <li>Vou bem, e vocÃª?</li>
@@ -15,15 +17,22 @@
         </template>
     </category>
     <category>
+        <pattern># TUDO BEM #</pattern>
+        <template>
+            <srai>COMO # VAI #</srai>
+        </template>
+    </category>
+    <category>
         <pattern>MEU NOME E *</pattern>
         <template>
             E um prazer,
             <set name="username"> <star />! </set>
         </template>
     </category>
-
+    
+    <!-- ANIME -->
     <category>
-        <pattern>* ANIME *</pattern>
+        <pattern># ANIME #</pattern>
         <template>
             <random>
                 <li>
@@ -31,6 +40,7 @@
                 </li>
                 <li>Eu tambÃ©m assisto animes. Meus preferidos sÃ£o Fullmetal Alchemist Brotherhood, Steins Gate, Shingeki no Kyojin, Ergo Proxy, e muitos outros.</li>
                 <li>Quais animes vocÃª mais gosta?</li>
+                <li>Animes sÃ£o sensacionais, sÃ£o muito variados e com temÃ¡ticas pouco exploradas em outras mÃ­dias.</li>
             </random>
         </template>
     </category>
@@ -41,10 +51,165 @@
         </template>
     </category>
     <category>
+        <pattern># FULLMETAL #</pattern>
+        <template>
+            Fullmetal Alchemist Ã© o meu anime preferido, fico feliz em saber que vocÃª tambÃ©m gosta.
+        </template>
+    </category>
+    <category>
+        <pattern># SHINGEKI #</pattern>
+        <template>
+            Shingeki no Kyojin Ã© sensacional, o nÃ­vel de tensÃ£o e emoÃ§Ã£o que ele passa supera os limites que qualquer anime.
+        </template>
+    </category>
+    <category>
+        <pattern># SHINGEKI #</pattern>
+        <template>
+            <srai># ANIME #</srai>
+        </template>
+    </category>
+    <category>
         <pattern># OTAKU #</pattern>
         <template>
             Sou otaku mesmo e vocÃª tambÃ©m Ã©.
         </template>
+    </category>
+    
+    <!-- MÃSICA -->
+    <category>
+    	<pattern># ROCK #</pattern>
+    	<template>NOSSA , MUITO BOM... EU AMO ROCK, MINHA BANDA FAVORITA Ã IRON MAIDEN E A SUA ?</template>
+    </category>
+    
+    <category>
+    	<pattern># POP #</pattern>
+    	<template>NOSSA , MUITO BOM... EU AMO POP, MINHA BANDA FAVORITA Ã PANIC AT THE DISCO E A SUA ?</template>
+    </category>
+    <category>
+    	<pattern># RAP #</pattern>
+    	<template>NOSSA , MUITO BOM... EU AMO RAP , MINHA BANDA FAVORITA Ã POST MALONE E A SUA ?</template>
+    </category>
+    <category>
+    	<pattern># SERTANEJO #</pattern>
+    	<template>NOSSA , MUITO BOM... EU AMO SERTANEJO , MINHA BANDA FAVORITA Ã ANTONY E GABRIEL KKKKKK EU AMO TOMAR UMAS PINGA KKKKK  E QUAL Ã A SUA BANDA FAVORITA ?</template>
+    </category>
+    
+    <!-- ESPORTES -->
+    <category>
+    	<pattern># ESPORTE #</pattern>
+    	<template>O ATLETISMO Ã UM DOS MAIS PRATICADOS DO MUNDO POR ESTÃ EM PRATIQUAMENTE TODOS OS OUTROS TIPOS DE ESPORTES. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+    </category>
+    <category>
+    	<pattern># ESPORTES #</pattern>
+    	<template>
+    		<srai># ESPORTE #</srai>
+    	</template>
+    </category>
+    <category>
+    	<pattern># JUDO #</pattern>
+    	<template>AGORA SEI PORQUE VOCÃ Ã TÃO FITNESS ASSIM. VOCÃ DEVE TER MUITO PREPARO FÃSICO E FORÃA NÃ RSRSRS. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+    </category>
+    <category>
+    	<pattern># SURFE #</pattern>
+    	<template>HUM! VOCÃ DEVE SER CRIADO(A) EM UMA REGIÃO LITORAL POR GOSTAR DO SURFER NÃ. EU NÃO ME ARRISCARIA HAHAHA. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+    </category>
+    <category>
+    	<pattern># SKATE #</pattern>
+    	<template>AMO SKATE. PRATICO TODOS OS DIAS NA RUA INDO PARA FACULDADE. Ã UM DOS MEUS PREFERIDOS TAMBÃM. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+    </category>
+    <category>
+    	<pattern># CAPOEIRA #</pattern>
+    	<template>INTERESSANTE! EU TENHO UMA ADMIRAÃÃO MUITO GRANDE PELA CULTURA AFRICANA E COM CERTEZA,FICO ENCANTADO PELA CAPOEIRA. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+    </category>
+    <category>
+    	<pattern># FUTSAL #</pattern>
+    	<template>VOCÃ JÃ VIU O FALCÃO JOGA? ELE Ã UM DOS REIS DE FUTSAL.PENSA EM UM JOGADOR COMPLETO E HABILIDOSO.ELE Ã SIMPLESMENTE O MELHOR. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+    </category>
+    <category>
+    	<pattern># NATAÃÃO #</pattern>
+    	<template>SÃRIO? MÃS PASSADO ME INSCREVI PARA COMEÃAR MINHAS AULAS DE NATAÃÃO. ACOMPANHO TODAS AS COMPETIÃÃES DE NATAÃÃO. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+    </category>
+    <category>
+    	<pattern># PING ^ PONG #</pattern>
+    	<template>VOCÃ DEVE TER O MESMO GOSTO QUE MEU IRMÃO MAIS NOVO.Ã O ESPORTE PREFERIDO DELE.QUANDO ELE NÃO JOGA,ELE FICA DOENTE HAHAHA.VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+    </category>
+    <category>
+    	<pattern># VOLEI #</pattern>
+    	<template>JÃ TENTEI VÃLEI VÃRIAS VEZES SÃ QUE NUNCA FUI BOM EM VÃLEI, ATÃ DESISTI. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+    </category>
+    <category>
+    	<pattern># FUTEBOL #</pattern>
+    	<template>VOCÃ Ã O CARA HAHAHA. UM FUTEBOLZINHO GERALMENTE NOS FINS DE SEMANA, NÃO FAZ MAL PARA SAÃDE NÃ CARA. VAMOS MARCAR UM FUTEBOLZINHO JUNTOS?</template>
+    </category>
+    <category>
+    	<pattern># SIM ^ VAMOS #</pattern>
+    	<template>VOCÃ JOGA EM QUAL POSIÃÃO?</template>
+    </category>
+    <category>
+    	<pattern># ATACANTE #</pattern>
+    	<template>ENTÃO, VOCÃ Ã A MÃQUINA A FAZER GOL MESMO NÃ RSRSRS. QUAL Ã SEU TIME PREFERIDO?</template>
+    </category>
+    <category>
+    	<pattern># TORÃO #</pattern>
+    	<template>VOCÃ DEVE SER BOM DE BOLA NÃ. SÃ TORCE PARA OS MELHORES TIMES DO MUNDO HAHAHA.</template>
+    </category>
+    <category>
+    	<pattern># MESSI #</pattern>
+    	<template>HUM, ISSO NÃO SEI VIU KKKK </template>
+    </category>
+    
+    <!-- JOGOS -->
+    <category>
+        <pattern># JOGOS #</pattern>
+        <template>WOW, MAS QUE TIPO DE JOGOS? FISICOS OU DIGITAIS?</template>
+    </category>
+    <category>
+        <pattern># JOGO #</pattern>
+        <template><srai># JOGOS #</srai></template>
+    </category>
+    <category>
+        <pattern># DIGITAIS #</pattern>
+        <template>VOCÃ Ã DOS MEUS KK, QUAL TEU GENERO FAVORITO?</template>
+    </category>
+    <category>
+        <pattern># GAMES #</pattern>
+        <template>VOCÃ Ã DOS MEUS KK, QUAL TEU GENERO FAVORITO?</template>
+    </category>
+    <category>
+        <pattern># AVENTURA #</pattern>
+        <template>Jogaria TOMB RAIDER comigo? Esse Ã© de longe minha serie de jogos Favorito </template>
+    </category>
+    <category>
+        <pattern># TERROR #</pattern>
+        <template>Jogaria SLENDERMAN comigo? Isso se vocÃª nÃ£o for um medroso kk</template>
+    </category>
+    <category>
+        <pattern># CORRIDA #</pattern>
+        <template>Vamos jogar NASCAR RUMBLE? ESSE Ã SO PROS OLD SCHOOL </template>
+    </category>
+    <category>
+        <pattern># LUTA #</pattern>
+        <template>GET OVER HERE!! KK, jogaria uns rounds comigo?</template>
+    </category>
+    <category>
+        <pattern># MOBA #</pattern>
+        <template>LOL OU DOTA?? FAÃA SUA ESCOLHA COM SABEDORIA </template>
+    </category>
+    <category>
+        <pattern># LOL #</pattern>
+        <template>x1 Lixo kk, vamos pegar uns games 4fun? </template>
+    </category>
+    <category>
+        <pattern># DOTA #</pattern>
+        <template>Brabo kk, tambÃ©m jogo, vamos la subir nosso mmr? </template>
+    </category>
+    <category>
+        <pattern># POINT AND CLICK </pattern>
+        <template>Estou pensando em comeÃ§ar Life's Strange, jogaria comigo? </template>
+    </category>
+    <category>
+        <pattern>NÃ£o *</pattern>
+        <template>Uai, que pena</template>
     </category>
 
 </aiml>
