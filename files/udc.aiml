@@ -2,13 +2,13 @@
 <aiml>
     <category>
         <pattern>OLA</pattern>
-        <template>Olá como vai?</template>
+        <template>OlÃ¡ como vai?</template>
     </category>
     <category>
         <pattern>Como vai?</pattern>
         <template>
             <random>
-                <li>Vou bem, e você?</li>
+                <li>Vou bem, e vocÃª?</li>
                 <li>De boa</li>
                 <li>Beleza</li>
             </random>
@@ -27,28 +27,24 @@
         <template>
             <random>
                 <li>
-                    Que legal <get name="username"></get>, Eu também assisto animes.
+                    Que legal <get name="username"></get>, Eu tambÃ©m assisto animes.
                 </li>
-                <li>Eu também assisto animes. Meus preferidos são Fullmetal Alchemist Brotherhood, Steins Gate, Shingeki no Kyojin, Ergo Proxy, e muitos outros.</li>
-                <li>Quais animes você mais gosta?</li>
+                <li>Eu tambÃ©m assisto animes. Meus preferidos sÃ£o Fullmetal Alchemist Brotherhood, Steins Gate, Shingeki no Kyojin, Ergo Proxy, e muitos outros.</li>
+                <li>Quais animes vocÃª mais gosta?</li>
             </random>
         </template>
     </category>
     <category>
-        <pattern>* ANIMES *</pattern>
+        <pattern># ANIMES #</pattern>
         <template>
-            <srai>* ANIME *</srai>
+            <srai># ANIME #</srai>
         </template>
     </category>
     <category>
-        <pattern>* OTAKU *</pattern>
+        <pattern># OTAKU #</pattern>
         <template>
-            Sou otaku mesmo e você também é.
+            Sou otaku mesmo e vocÃª tambÃ©m Ã©.
         </template>
-    </category>
-    <category>
-        <pattern>*</pattern>
-        <template>Não entendo</template>
     </category>
 
 </aiml>
