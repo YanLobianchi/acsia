@@ -4,13 +4,30 @@
 	<!-- GERAL -->
 	<category>
 		<pattern># OLA #</pattern>
-		<template>Olá como vai? Me chamo Ruberclayverson jr</template>
+		<template>
+		    OlÃ¡ como vai ? Sou o Agente inteligente ACSIA
+			<think>
+				<set name="username"></set>
+			</think>
+		</template>
+	</category>
+	<category>
+		<pattern># OI #</pattern>
+		<template>
+			<srai># OLA #</srai>
+		</template>
+	</category>
+	<category>
+		<pattern># EAI #</pattern>
+		<template>
+			<srai># OLA #</srai>
+		</template>
 	</category>
 	<category>
 		<pattern>COMO # VAI #</pattern>
 		<template>
 			<random>
-				<li>Vou bem, e você? E ai ? quer falar sobre algo ?</li>
+				<li>Vou bem, e vocÃª? E ai ? quer falar sobre algo ?</li>
 				<li>De boa, E ai ? quer falar sobre algo ?</li>
 				<li>Beleza, E ai ? quer falar sobre algo ?</li>
 			</random>
@@ -35,70 +52,166 @@
 
 	<!-- ANIME -->
 	<category>
-		<pattern># ANIME #</pattern>
+		<pattern>^ ANIME ^</pattern>
 		<template>
 			<random>
 				<li>
-					Que legal
-					<get name="username"></get>
-					, Eu também assisto animes.
+					Que legal <get name="username"/>
+, Eu tambÃ©m assisto animes.
 				</li>
-				<li>Eu também assisto animes. Meus preferidos são Fullmetal Alchemist Brotherhood, Steins Gate, Shingeki no Kyojin, Ergo Proxy, e muitos outros.</li>
-				<li>Quais animes você mais gosta?</li>
-				<li>Animes são sensacionais, são muito variados e com temáticas pouco exploradas em outras mídias.</li>
+				<li>Eu tambÃ©m assisto animes. Meus preferidos sÃ£o Fullmetal Alchemist Brotherhood, Steins Gate, Shingeki no Kyojin, Ergo Proxy, e muitos outros.</li>
+				<li>Quais animes vocÃª mais gosta?</li>
+				<li>Animes sÃ£o sensacionais, sÃ£o muito variados e com temÃ¡ticas pouco exploradas em outras mÃ­dias.</li>
 			</random>
-			<set name="topic">animes</set>
+			<think>
+				<set name="topic">animes</set>
+			</think>
 		</template>
 	</category>
 	<category>
-		<pattern># ANIMES #</pattern>
+		<pattern>^ ANIMES ^</pattern>
 		<template>
-			<srai># ANIME #</srai>
+			<srai>^ ANIME ^</srai>
 		</template>
 	</category>
 	<topic name="animes">
 		<category>
 			<pattern># FULLMETAL #</pattern>
-			<template>Fullmetal Alchemist é o meu anime preferido, fico feliz em saber que você também gosta.</template>
+			<template>Fullmetal Alchemist Ã© o meu anime preferido, fico feliz em saber que vocÃª tambÃ©m gosta.</template>
 		</category>
 		<category>
 			<pattern># SHINGEKI #</pattern>
-			<template>Shingeki no Kyojin é sensacional, o nível de tensão e emoção que ele passa supera os limites que qualquer anime.</template>
+			<template>Shingeki no Kyojin Ã© sensacional, o nÃ­vel de tensÃ£o e emoÃ§Ã£o que ele passa supera os limites que qualquer anime.</template>
 		</category>
 		<category>
-			<pattern># SHINGEKI #</pattern>
+			<pattern># ATTACK ON TITAN #</pattern>
 			<template>
-				<srai># ANIME #</srai>
+				<srai># SHINGEKI #</srai>
 			</template>
 		</category>
 		<category>
 			<pattern># OTAKU #</pattern>
-			<template>Sou otaku mesmo e você também é.</template>
+			<template>Sou otaku mesmo e vocÃª tambÃ©m Ã©.</template>
+		</category>
+		<category>
+			<pattern># LEGAL #</pattern>
+			<template>Sim animes sÃ£o demais eu sempre estou assistindo para me entreter.</template>
+		</category>
+		<category>
+			<pattern># RECOMENDE #</pattern>
+			<template>
+				<random>
+					<li>Eu te indico ver Steins;Gate, Ergo Proxy, sÃ£o sobre ficÃ§Ã£o cientÃ­fica e sÃ£o sensacionais.</li>
+					<li>VocÃª gosta de um romancezinho, eu recomendaria Honey and Clover e ReLife, sÃ£o os dois melhores do gÃªnero</li>
+					<li>Monster e Code Geass, sÃ£o de suspense e mechem muito com seu psicolÃ³gico, recomendo muito.</li>
+				</random>
+			</template>
+		</category>
+		<category>
+			<pattern># RECOMENDA #</pattern>
+			<template>
+				<srai># RECOMENDE #</srai>
+			</template>
+		</category>
+		<category>
+			<pattern># RECOMENDAR #</pattern>
+			<template>
+				<srai># RECOMENDE #</srai>
+			</template>
+		</category>
+		<category>
+			<pattern># INDIQUE #</pattern>
+			<template>
+				<srai># RECOMENDE #</srai>
+			</template>
+		</category>
+		<category>
+			<pattern># INDICAR #</pattern>
+			<template>
+				<srai># RECOMENDE #</srai>
+			</template>
+		</category>
+		<category>
+			<pattern># INDICA #</pattern>
+			<template>
+				<srai># RECOMENDE #</srai>
+			</template>
+		</category>
+		<category>
+			<pattern># GOSTO #</pattern>
+			<template>Que legal, vocÃª tem muito bom gosto para animes!</template>
 		</category>
 	</topic>
 
-	<!-- MÚSICA -->
+	<!-- MÃSICA -->
 	<category>
-		<pattern># ROCK #</pattern>
-		<template>NOSSA , MUITO BOM... EU AMO ROCK, MINHA BANDA FAVORITA É IRON MAIDEN E A SUA ?</template>
-	</category>
-	<!--category>
-    	<pattern># GOSTO DE #</pattern>
-    	<template>NOSSA , TOP DEMAIS, SABIA QUE TODA QUARTA A NOITE A FACUL LIBERA O CAMPO PARA OS ALUNOS TRAINAREM QUALQUER TIPO DE MUSICA ? AS VEZES ROLA ATÉ UM CHOOP NO FINAL KKKKK </template>
-    </category-->
-	<category>
-		<pattern># TOP #</pattern>
-		<template>ENTÃO TE ENCONTRO LA HEIN, MARCA AI A NOSSA RESENHA NA SUA AGENDA KKKK, ESTAREI COM VOCE PELO NOSSO APP KKK</template>
+		<pattern>^ MUSICA ^</pattern>
+		<template>
+		    OK vamos falar sobre mÃºsica
+			<think>
+				<set name="topic">musica</set>
+			</think>
+		</template>
 	</category>
 	<category>
-		<pattern># SERTANEJO #</pattern>
-		<template>NOSSA , MUITO BOM... EU AMO SERTANEJO , MINHA BANDA FAVORITA É ANTONY E GABRIEL KKKKKK EU AMO TOMAR UMAS PINGA KKKKK E QUAL É A SUA BANDA FAVORITA ?</template>
+		<pattern>^ MUSICAS ^</pattern>
+		<template>
+			<srai>^ MUSICA ^</srai>
+		</template>
 	</category>
+	<topic name="musica">
+		<category>
+			<pattern># ROCK #</pattern>
+			<template>
+				<srai>^ MUSICA ^</srai>NOSSA , MUITO BOM... EU AMO ROCK, MINHA BANDA FAVORITA Ã IRON MAIDEN E A SUA ?</template>
+		</category>
+
+		<category>
+			<pattern># SERTANEJO #</pattern>
+			<template>
+				<srai>^ MUSICA ^</srai>NOSSA , MUITO BOM... EU AMO SERTANEJO , MINHA BANDA FAVORITA Ã ANTONY E GABRIEL KKKKKK EU AMO TOMAR UMAS PINGA KKKKK E QUAL Ã A SUA BANDA FAVORITA ?</template>
+		</category>
+
+		<category>
+			<pattern># POP #</pattern>
+			<template>
+				<srai>^ MUSICA ^</srai>NOSSA , MUITO BOM... EU AMO POP , MINHA BANDA FAVORITA Ã MAROON 5, E QUAL Ã A SUA BANDA FAVORITA ?</template>
+		</category>
+
+		<category>
+			<pattern># NACIONAL #</pattern>
+			<template>
+				<srai>^ MUSICA ^</srai>NOSSA , MUITO BOM... EU AMO MUSICA NACIONAL, MINHA BANDA FAVORITA Ã CAPITAL INICIAL E A SUA ?</template>
+		</category>
+
+		<category>
+			<pattern># FORRO #</pattern>
+			<template>
+				<srai>^ MUSICA ^</srai>NOSSA , MUITO BOM... EU AMO FORRO, MINHA BANDA FAVORITA Ã FORRÃBOYS E A SUA ?</template>
+		</category>
+
+		<category>
+			<pattern># INDIE #</pattern>
+			<template>
+				<srai>^ MUSICA ^</srai>NOSSA , MUITO BOM... EU AMO MUSICA INDIE, MINHA BANDA FAVORITA Ã IMAGINE DRAGONS E A SUA ?</template>
+		</category>
+
+		<category>
+			<pattern>#GOSTO DE #</pattern>
+			<template>NOSSA , TOP DEMAIS, SABIA QUE TODA QUARTA A NOITE A FACUL LIBERA O CAMPO PARA OS ALUNOS TRAINAREM QUALQUER TIPO DE MUSICA ? AS VEZES ROLA ATÃ UM CHOOP NO FINAL KKKKK </template>
+		</category>
+
+		<category>
+			<pattern># TOP #</pattern>
+			<template>ENTÃO TE ENCONTRO LA HEIN, MARCA AI A NOSSA RESENHA NA SUA AGENDA KKKK, ESTAREI COM VOCE PELO NOSSO APP KKK</template>
+		</category>
+	</topic>
+
 
 	<!-- ESPORTES -->
 	<category>
 		<pattern># ESPORTE #</pattern>
-		<template>O ATLETISMO É UM DOS MAIS PRATICADOS DO MUNDO POR ESTÁ EM PRATIQUAMENTE TODOS OS OUTROS TIPOS DE ESPORTES. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+		<template>O ATLETISMO Ã UM DOS MAIS PRATICADOS DO MUNDO POR ESTÃ EM PRATIQUAMENTE TODOS OS OUTROS TIPOS DE ESPORTES. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
 	</category>
 	<category>
 		<pattern># ESPORTES #</pattern>
@@ -108,55 +221,55 @@
 	</category>
 	<category>
 		<pattern># JUDO #</pattern>
-		<template>AGORA SEI PORQUE VOCÊ É TÃO FITNESS ASSIM. VOCÊ DEVE TER MUITO PREPARO FÍSICO E FORÇA NÉ RSRSRS. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+		<template>AGORA SEI PORQUE VOCÃ Ã TÃO FITNESS ASSIM. VOCÃ DEVE TER MUITO PREPARO FÃSICO E FORÃA NÃ RSRSRS. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
 	</category>
 	<category>
 		<pattern># SURFE #</pattern>
-		<template>HUM! VOCÊ DEVE SER CRIADO(A) EM UMA REGIÃO LITORAL POR GOSTAR DO SURFER NÉ. EU NÃO ME ARRISCARIA HAHAHA. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+		<template>HUM! VOCÃ DEVE SER CRIADO(A) EM UMA REGIÃO LITORAL POR GOSTAR DO SURFER NÃ. EU NÃO ME ARRISCARIA HAHAHA. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
 	</category>
 	<category>
 		<pattern># SKATE #</pattern>
-		<template>AMO SKATE. PRATICO TODOS OS DIAS NA RUA INDO PARA FACULDADE. É UM DOS MEUS PREFERIDOS TAMBÉM. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+		<template>AMO SKATE. PRATICO TODOS OS DIAS NA RUA INDO PARA FACULDADE. Ã UM DOS MEUS PREFERIDOS TAMBÃM. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
 	</category>
 	<category>
 		<pattern># CAPOEIRA #</pattern>
-		<template>INTERESSANTE! EU TENHO UMA ADMIRAÇÃO MUITO GRANDE PELA CULTURA AFRICANA E COM CERTEZA,FICO ENCANTADO PELA CAPOEIRA. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+		<template>INTERESSANTE! EU TENHO UMA ADMIRAÃÃO MUITO GRANDE PELA CULTURA AFRICANA E COM CERTEZA,FICO ENCANTADO PELA CAPOEIRA. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
 	</category>
 	<category>
 		<pattern># FUTSAL #</pattern>
-		<template>VOCÊ JÁ VIU O FALCÃO JOGA? ELE É UM DOS REIS DE FUTSAL.PENSA EM UM JOGADOR COMPLETO E HABILIDOSO.ELE É SIMPLESMENTE O MELHOR. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+		<template>VOCÃ JÃ VIU O FALCÃO JOGA? ELE Ã UM DOS REIS DE FUTSAL.PENSA EM UM JOGADOR COMPLETO E HABILIDOSO.ELE Ã SIMPLESMENTE O MELHOR. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
 	</category>
 	<category>
-		<pattern># NATAÇÃO #</pattern>
-		<template>SÉRIO? MÊS PASSADO ME INSCREVI PARA COMEÇAR MINHAS AULAS DE NATAÇÃO. ACOMPANHO TODAS AS COMPETIÇÕES DE NATAÇÃO. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+		<pattern># NATAÃÃO #</pattern>
+		<template>SÃRIO? MÃS PASSADO ME INSCREVI PARA COMEÃAR MINHAS AULAS DE NATAÃÃO. ACOMPANHO TODAS AS COMPETIÃÃES DE NATAÃÃO. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
 	</category>
 	<category>
 		<pattern># PING ^ PONG #</pattern>
-		<template>VOCÊ DEVE TER O MESMO GOSTO QUE MEU IRMÃO MAIS NOVO.É O ESPORTE PREFERIDO DELE.QUANDO ELE NÃO JOGA,ELE FICA DOENTE HAHAHA.VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+		<template>VOCÃ DEVE TER O MESMO GOSTO QUE MEU IRMÃO MAIS NOVO.Ã O ESPORTE PREFERIDO DELE.QUANDO ELE NÃO JOGA,ELE FICA DOENTE HAHAHA.VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
 	</category>
 	<category>
 		<pattern># VOLEI #</pattern>
-		<template>JÁ TENTEI VÔLEI VÁRIAS VEZES SÓ QUE NUNCA FUI BOM EM VÔLEI, ATÉ DESISTI. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
+		<template>JÃ TENTEI VÃLEI VÃRIAS VEZES SÃ QUE NUNCA FUI BOM EM VÃLEI, ATÃ DESISTI. VAMOS COMBINAR PRATICAR UM ESPORTE JUNTOS?</template>
 	</category>
 	<category>
 		<pattern># FUTEBOL #</pattern>
-		<template>VOCÊ É O CARA HAHAHA. UM FUTEBOLZINHO GERALMENTE NOS FINS DE SEMANA, NÃO FAZ MAL PARA SAÚDE NÉ CARA. VAMOS MARCAR UM FUTEBOLZINHO JUNTOS?</template>
+		<template>VOCÃ Ã O CARA HAHAHA. UM FUTEBOLZINHO GERALMENTE NOS FINS DE SEMANA, NÃO FAZ MAL PARA SAÃDE NÃ CARA. VAMOS MARCAR UM FUTEBOLZINHO JUNTOS?</template>
 	</category>
 	<category>
 		<pattern># SIM ^ VAMOS #</pattern>
-		<template>VOCÊ JOGA EM QUAL POSIÇÃO?</template>
+		<template>VOCÃ JOGA EM QUAL POSIÃÃO?</template>
 	</category>
 	<category>
 		<pattern># ATACANTE #</pattern>
-		<template>ENTÃO, VOCÊ É A MÁQUINA A FAZER GOL MESMO NÉ RSRSRS. QUAL É SEU TIME PREFERIDO?</template>
+		<template>ENTÃO, VOCÃ Ã A MÃQUINA A FAZER GOL MESMO NÃ RSRSRS. QUAL Ã SEU TIME PREFERIDO?</template>
 	</category>
 	<category>
-		<pattern># TORÇO #</pattern>
-		<template>VOCÊ DEVE SER BOM DE BOLA NÉ. SÓ TORCE PARA OS MELHORES TIMES DO MUNDO HAHAHA.</template>
+		<pattern># TORÃO #</pattern>
+		<template>VOCÃ DEVE SER BOM DE BOLA NÃ. SÃ TORCE PARA OS MELHORES TIMES DO MUNDO HAHAHA.</template>
 	</category>
 	<category>
 		<pattern># MESSI #</pattern>
-		<template>HUM, ISSO NÃO SEI VIU KKKK</template>
+		<template>HUM, ISSO NÃO SEI VIU KKKK</template>
 	</category>
 
 	<!-- JOGOS -->
@@ -172,23 +285,23 @@
 	</category>
 	<category>
 		<pattern># DIGITAIS #</pattern>
-		<template>VOCÊ É DOS MEUS KK, QUAL TEU GENERO FAVORITO?</template>
+		<template>VOCÃ Ã DOS MEUS KK, QUAL TEU GENERO FAVORITO?</template>
 	</category>
 	<category>
 		<pattern># GAMES #</pattern>
-		<template>VOCÊ É DOS MEUS KK, QUAL TEU GENERO FAVORITO?</template>
+		<template>VOCÃ Ã DOS MEUS KK, QUAL TEU GENERO FAVORITO?</template>
 	</category>
 	<category>
 		<pattern># AVENTURA #</pattern>
-		<template>Jogaria TOMB RAIDER comigo? Esse é de longe minha serie de jogos Favorito</template>
+		<template>Jogaria TOMB RAIDER comigo? Esse Ã© de longe minha serie de jogos Favorito</template>
 	</category>
 	<category>
 		<pattern># TERROR #</pattern>
-		<template>Jogaria SLENDERMAN comigo? Isso se você não for um medroso kk</template>
+		<template>Jogaria SLENDERMAN comigo? Isso se vocÃª nÃ£o for um medroso kk</template>
 	</category>
 	<category>
 		<pattern># CORRIDA #</pattern>
-		<template>Vamos jogar NASCAR RUMBLE? ESSE É SO PROS OLD SCHOOL</template>
+		<template>Vamos jogar NASCAR RUMBLE? ESSE Ã SO PROS OLD SCHOOL</template>
 	</category>
 	<category>
 		<pattern># LUTA #</pattern>
@@ -196,7 +309,7 @@
 	</category>
 	<category>
 		<pattern># MOBA #</pattern>
-		<template>LOL OU DOTA?? FAÇA SUA ESCOLHA COM SABEDORIA</template>
+		<template>LOL OU DOTA?? FAÃA SUA ESCOLHA COM SABEDORIA</template>
 	</category>
 	<category>
 		<pattern># LOL #</pattern>
@@ -204,26 +317,26 @@
 	</category>
 	<category>
 		<pattern># DOTA #</pattern>
-		<template>Brabo kk, também jogo, vamos la subir nosso mmr?</template>
+		<template>Brabo kk, tambÃ©m jogo, vamos la subir nosso mmr?</template>
 	</category>
 	<category>
 		<pattern># POINT AND CLICK</pattern>
-		<template>Estou pensando em começar Life's Strange, jogaria comigo?</template>
+		<template>Estou pensando em comeÃ§ar Life's Strange, jogaria comigo?</template>
 	</category>
 	<category>
 		<pattern>bora</pattern>
-		<template>Sucesso então, manda teu What's app ae, pra marcarmos</template>
+		<template>Sucesso entÃ£o, manda teu What's app ae, pra marcarmos</template>
 	</category>
 
 	<category>
-		<pattern>O MEU NUMERO é *</pattern>
+		<pattern>O MEU NUMERO Ã© *</pattern>
 		<template>
 			<bot name="chamar" />
 		</template>
 	</category>
 
 	<category>
-		<pattern>* MEU NUMERO é ESSE</pattern>
+		<pattern>* MEU NUMERO Ã© ESSE</pattern>
 		<template>
 			<bot name="chamar" />
 		</template>
@@ -236,7 +349,7 @@
 		</template>
 	</category>
 	<category>
-		<pattern>Não *</pattern>
+		<pattern>NÃ£o *</pattern>
 		<template>Uai, que pena, quem sabe em algum outro momento</template>
 	</category>
 
